@@ -1,4 +1,11 @@
-const { createApp } = require('vue');
-import App from "./App.vue";
+import Vue from 'vue'
+import App from './App.vue'
+import el from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
 
-createApp(App).mount("#app");
+Vue.config.productionTip = false
+Vue.use(el);
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
